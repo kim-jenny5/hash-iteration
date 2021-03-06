@@ -7,5 +7,13 @@
 # }
 
 def select_winner(passengers)
-  # add the code snippet here!
+  winner = ""
+  passengers.each do |suite, name|
+    if suite == :suite_a && name.start_with?("A")
+      winner = name
+    end
+  end
+winner 
 end
+#chose each instead of collect bc we don't want to collect the key/value
+#pair, just the NAME of the winner
